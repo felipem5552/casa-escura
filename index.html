@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Casa Escura — jogo de terror e furtividade. Encontre a chave e fuja.">
+<title>Casa Escura</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M16 5 4 16h4v11h16V16h4z' fill='%23a82222'/%3E%3Crect x='13' y='18' width='6' height='9' fill='%23000'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="g" data-scene="menu">
+  <canvas id="c" width="960" height="540" aria-label="Cena do jogo"></canvas>
+
+  <div id="grain"></div>
+  <div id="vig"></div>
+  <div id="danger"></div>
+
+  <div class="hud" id="hud">
+    <div id="sta"><i></i></div>
+    <div id="bat"><i></i></div>
+    <div id="obj"></div>
+    <div id="key"></div>
+    <div id="hide" aria-live="polite"></div>
+    <div id="msg" aria-live="polite"></div>
+    <div id="cap" aria-live="polite"></div>
+    <button id="pausebtn" class="icon" data-tap="pause" aria-label="Pausar">❚❚</button>
+  </div>
+
+  <div id="banner"></div>
+  <div id="hurt"></div>
+  <div id="fade"></div>
+  <div id="ov" hidden></div>
+  <div id="toast" aria-live="polite"></div>
+
+  <div id="touch">
+    <div class="pad">
+      <button data-hold="left" aria-label="Esquerda">◀</button>
+      <button data-hold="right" aria-label="Direita">▶</button>
+      <button data-hold="breath" aria-label="Segurar respiração">FÔLEGO</button>
+    </div>
+    <div class="pad">
+      <button data-tap="throw" aria-label="Jogar garrafa">GARRAFA</button>
+      <button data-tap="battery" aria-label="Trocar pilhas">PILHA</button>
+      <button data-hold="run" aria-label="Correr">CORRER</button>
+      <button data-tap="flashlight" aria-label="Lanterna">LUZ</button>
+      <button data-tap="interact" class="act" aria-label="Interagir">E</button>
+    </div>
+  </div>
+</div>
+<noscript><p style="color:#ccc;text-align:center;margin-top:20vh">Ative o JavaScript para jogar.</p></noscript>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
